@@ -39,5 +39,13 @@ public class Main {
 
         System.out.println("Collection: ");
         intContainer.printCollection();
+
+        System.out.println("Delete two first and one last number: ");
+        intContainer.deleteFirstNum();
+        intContainer.deleteFirstNum();
+        intContainer.deleteLastNum();
+
+        System.out.println("Collection: ");
+        intContainer.printCollection();
     }
 }
