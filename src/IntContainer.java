@@ -189,6 +189,54 @@ public class IntContainer {
     }
 
     /**
+     * Get current count of numbers in collection
+     *
+     * @return current count of numbers
+     */
+    public int getCountOfNums() {
+        return countOfNums;
+    }
+
+    /**
+     * Get number from collection by index
+     *
+     * @param index - index of number
+     * @return number with index
+     */
+    public int getElementByIndex(int index) {
+
+        if(index < 0 || index >= countOfNums) {
+            throw new NullPointerException("Incorrect index!");
+        }
+
+        return nums[index];
+    }
+
+    /**
+     * Delete number from collection by index
+     *
+     * @param index - index of number
+     */
+    public void deleteElementByIndex(int index) {
+
+        if(index < 0 || index >= countOfNums) {
+            throw new NullPointerException("Incorrect index!");
+        }
+
+        int buf[] = new int[nums.length];
+
+        for(int i = 0, j = 0; i<countOfNums; i++) {
+            if (i!=index) {
+                buf[j] = nums[i];
+                j++;
+            }
+        }
+
+        nums = buf;
+        countOfNums--;
+    }
+
+    /**
      * Print collection
      */
     public void printCollection() {

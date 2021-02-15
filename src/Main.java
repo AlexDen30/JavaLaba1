@@ -40,6 +40,14 @@ public class Main {
         System.out.println("Collection: ");
         intContainer.printCollection();
 
+        System.out.println("Enter index of num what you want to get and delete than: ");
+        int index = input.nextInt();
+        System.out.println("Selected: " + intContainer.getElementByIndex(index));
+        intContainer.deleteElementByIndex(index);
+
+        System.out.println("Collection: ");
+        intContainer.printCollection();
+
         System.out.println("Delete two first and one last number: ");
         intContainer.deleteFirstNum();
         intContainer.deleteFirstNum();
@@ -47,5 +55,6 @@ public class Main {
 
         System.out.println("Collection: ");
         intContainer.printCollection();
+
     }
 }
